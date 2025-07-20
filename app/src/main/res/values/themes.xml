@@ -1,0 +1,98 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TodoList" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/primary_accent</item>
+        <item name="colorPrimaryVariant">@color/primary_accent_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <!-- Secondary Colors -->
+        <item name="colorSecondary">@color/primary_accent_light</item>
+        <item name="colorSecondaryVariant">@color/primary_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <!-- Background Colors -->
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/primary_text</item>
+        <item name="android:colorBackground">@color/background_gradient</item>
+        <item name="colorOnBackground">@color/primary_text</item>
+        
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/primary_accent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.TodoList" parent="Base.Theme.TodoList" />
+    
+    <!-- Custom Toolbar Style -->
+    <style name="ToolbarTitleStyle" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <!-- Custom Checkbox Style -->
+    <style name="CustomCheckboxStyle" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="android:buttonTint">@color/checkbox_tint</item>
+        <item name="android:scaleX">1.2</item>
+        <item name="android:scaleY">1.2</item>
+    </style>
+    
+    <!-- Task Action Button Style -->
+    <style name="TaskActionButtonStyle" parent="Widget.Material3.Button.IconButton">
+        <item name="android:elevation">2dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    
+    <!-- Input Field Style -->
+    <style name="CustomTextInputStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/primary_accent</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxStrokeWidthFocused">3dp</item>
+        <item name="hintTextColor">@color/hint_text</item>
+        <item name="android:textColorHint">@color/hint_text</item>
+    </style>
+    
+    <!-- Card Styles -->
+    <style name="ElevatedCardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">6dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    
+    <!-- Button Styles -->
+    <style name="PrimaryButtonStyle" parent="Widget.Material3.Button">
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">4dp</item>
+        <item name="backgroundTint">@color/button_primary</item>
+    </style>
+    
+    <!-- Text Styles -->
+    <style name="SectionHeaderStyle" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textColor">@color/section_header</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+    <style name="TaskTitleStyle" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/task_text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+    
+    <style name="TaskSubtitleStyle" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/task_text_secondary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <!-- FAB Style -->
+    <style name="CustomFABStyle" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/fab_bg</item>
+        <item name="tint">@color/white</item>
+        <item name="elevation">12dp</item>
+        <item name="hoveredFocusedTranslationZ">16dp</item>
+        <item name="pressedTranslationZ">8dp</item>
+    </style>
+</resources>

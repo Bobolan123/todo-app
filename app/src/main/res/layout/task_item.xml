@@ -1,0 +1,128 @@
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="6dp"
+    android:layout_marginHorizontal="4dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="16dp"
+    app:strokeWidth="0dp"
+    app:cardBackgroundColor="@color/task_card_bg"
+    android:foreground="?attr/selectableItemBackground"
+    style="@style/Widget.Material3.CardView.Elevated">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Main Content Row -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <!-- Custom Priority Indicator -->
+            <View
+                android:id="@+id/priority_indicator"
+                android:layout_width="4dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/priority_indicator"
+                android:visibility="visible" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/task_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/checkbox_tint"
+                android:layout_marginEnd="12dp"
+                style="@style/CustomCheckboxStyle" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:id="@+id/task_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/task_text_primary"
+                    android:textStyle="normal"
+                    android:lineSpacingExtra="2dp"
+                    android:maxLines="3"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/task_timestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/task_text_secondary"
+                    android:text="Created today"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/edit_btn"
+                    style="@style/TaskActionButtonStyle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="Edit task"
+                    app:icon="@android:drawable/ic_menu_edit"
+                    app:iconTint="@color/edit_button_tint"
+                    app:iconSize="18dp"
+                    app:backgroundTint="@color/edit_button_bg"
+                    app:cornerRadius="20dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/delete_btn"
+                    style="@style/TaskActionButtonStyle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="Delete task"
+                    app:icon="@android:drawable/ic_menu_delete"
+                    app:iconTint="@color/delete_button_tint"
+                    app:iconSize="18dp"
+                    app:backgroundTint="@color/delete_button_bg"
+                    app:cornerRadius="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Completion Status Bar -->
+        <View
+            android:id="@+id/completion_bar"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/completion_bar_background"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- Subtle Shadow/Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/card_divider"
+        android:alpha="0.1" />
+
+</com.google.android.material.card.MaterialCardView>
